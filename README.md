@@ -23,7 +23,12 @@
    
   随机色度变换可以解决光照复杂性问题。
   
-  ## 2
+  ## 2数据增广
+  
+  ### 好处：
+  
+  #### 通过数据增广，可以扩充训练数据集，增加数据集的多样性，提高模型的[泛化能力]。此外，数据增广还可以防止过拟合，提高模型的[鲁棒性]。在实际应用中，数据增广是非常重要的技术，可以帮助我们训练出更加准确和鲁棒的模型。
+  
   ### 实现以下数据增广:
 1.随机水平翻转，概率50%
 
@@ -34,14 +39,14 @@
 ```python
 import torch
 import torchvision.transforms as transforms
-from PIL import Image
+from PIL import Image      #使用Pillow库中的Image模块，可以打开、创建、保存、缩放、裁剪、旋转和转换图像格式等操作
 
 # 定义数据增广函数
 transform = transforms.Compose([
-    transforms.RandomHorizontalFlip(p=0.5),
-    transforms.RandomRotation(degrees=100,expand=False),
-    transforms.RandomResizedCrop(size=256, scale=(0.5, 1.0), ratio=(0.8, 1.2)),
-    transforms.ToTensor(),
+    transforms.RandomHorizontalFlip(p=0.5),     #以0.5的概率随机水平左右翻转图像
+    transforms.RandomRotation(degrees=100,expand=False),      #以给定的角度随机旋转输入的图像
+    transforms.RandomResizedCrop(size=256, scale=(0.5, 1.0), ratio=(0.8, 1.2)),    #用于随机裁剪和缩放图像
+    transforms.ToTensor(),         #用于将PIL图像或NumPy数组转换为尺寸为(C, H, W)的张量
 ])
 
 # 加载图片
