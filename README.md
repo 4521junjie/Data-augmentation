@@ -57,4 +57,6 @@ plt.show()
 ```
 ### 训练集
 
-![裁剪前]()
+![增广前](D:\shiyaner\classification-basic-sample-master\tools\dog.jpg)
+
+![增广后](D:\shiyaner\classification-basic-sample-master\tools\dog1.jpg)
