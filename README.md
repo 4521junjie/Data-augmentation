@@ -55,3 +55,6 @@ import matplotlib.pyplot as plt
 plt.imshow(augmented_image.permute(1, 2, 0))
 plt.show()
 ```
+### 训练集
+
+![裁剪前]()
