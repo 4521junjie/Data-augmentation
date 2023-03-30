@@ -60,7 +60,11 @@ plt.imshow(augmented_image.permute(1, 2, 0))
 plt.show()
 ```
 ### 训练集
+增广前
 
-![增广前](https://github.com/4521junjie/Data-augmentation/blob/main/test/train/dog.jpg)
+![dog](https://user-images.githubusercontent.com/119326710/228847735-749da688-78b2-48d4-934c-2d7fe419870e.jpg)
 
-![增广后](https://github.com/4521junjie/Data-augmentation/blob/main/test/train/dog1.jpg)
+增广后
+
+![dog1](https://user-images.githubusercontent.com/119326710/228848274-cf89147b-5bfd-41cd-8447-30717dbb82ca.jpg)
+
