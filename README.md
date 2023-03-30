@@ -34,7 +34,7 @@
 #### 2.随机旋转，角度范围要小，概率50%
 
 #### 3.随机缩放裁切，裁切后尺寸256，概率50%
-
+### 1
 ```python
 import torch
 import torchvision.transforms as transforms
@@ -68,3 +68,37 @@ plt.show()
 
 ![dog1](https://user-images.githubusercontent.com/119326710/228848274-cf89147b-5bfd-41cd-8447-30717dbb82ca.jpg)
 
+
+### 2
+```python
+from torchvision import transforms
+from PIL import Image
+import matplotlib.pyplot as plt
+
+# 定义数据增强变换
+transform = transforms.Compose([
+    transforms.RandomResizedCrop(256, scale=(0.5, 0.5), ratio=(1.0, 1.0)),
+    transforms.RandomHorizontalFlip(p=0.5),
+    transforms.RandomRotation(degrees=(-10, 10)),
+    transforms.ToTensor(),
+])
+
+# 加载训练集图片和验证集图片
+train_image = Image.open(r'D:\data  augmentation\classification-basic-sample-master\新建文件夹\train\dog.jpg')
+val_image = Image.open(r'D:\data  augmentation\classification-basic-sample-master\新建文件夹\val\lb.jpg')
+
+# 对训练集图片和验证集图片进行增广
+augmented_train_image = transform(train_image)
+augmented_val_image = transform(val_image)
+
+# 显示增广后的图片
+fig, axs = plt.subplots(1, 2)
+axs[0].imshow(augmented_train_image.permute(1, 2, 0))
+axs[1].imshow(augmented_val_image.permute(1, 2, 0))
+plt.show()
+```
+### 训练集
+
+增广后
+
+![test2](https://user-images.githubusercontent.com/119326710/228850465-d38327d1-f5ac-41b7-a7c0-903cd52bde8d.jpg)
