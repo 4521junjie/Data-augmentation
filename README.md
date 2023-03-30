@@ -34,7 +34,7 @@
 #### 2.随机旋转，角度范围要小，概率50%
 
 #### 3.随机缩放裁切，裁切后尺寸256，概率50%
-### 1
+### 1、对单一图片剪切
 ```python
 import torch
 import torchvision.transforms as transforms
@@ -69,7 +69,7 @@ plt.show()
 ![dog1](https://user-images.githubusercontent.com/119326710/228848274-cf89147b-5bfd-41cd-8447-30717dbb82ca.jpg)
 
 
-### 2
+### 2、对训练＋验证照片剪切
 ```python
 from torchvision import transforms
 from PIL import Image
