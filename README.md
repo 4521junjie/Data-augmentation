@@ -61,6 +61,6 @@ plt.show()
 ```
 ### 训练集
 
-![增广前](https://github.com/4521junjie/Data-augmentation/blob/main/dog.jpg)
+![增广前](https://github.com/4521junjie/Data-augmentation/blob/main/test/train/dog.jpg)
 
-![增广后](https://github.com/4521junjie/Data-augmentation/blob/main/dog1.jpg)
+![增广后](https://github.com/4521junjie/Data-augmentation/blob/main/test/train/dog1.jpg)
