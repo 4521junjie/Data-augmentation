@@ -72,7 +72,7 @@ plt.show()
 ### 训练集
 增广前
 
-![dog](https://user-images.githubusercontent.com/119326710/228847735-749da688-78b2-48d4-934c-2d7fe419870e.jpg)
+![dog](https://github.com/4521junjie/Data-augmentation/blob/main/test/train/dog.jpg)
 
 增广后
 
